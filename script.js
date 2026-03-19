@@ -207,7 +207,7 @@ function update() {
   const gew_min = base + 300;
   const usesMinimum = gew_min > gew_pct;
   const gew = usesMinimum ? gew_min : gew_pct;
-  const effectivePct = ((gew - base) / base * 100).toFixed(1);
+  const effectivePct = (((gew - base) / base) * 100).toFixed(1);
 
   document.getElementById("scenarios-card").style.display = "block";
   document.getElementById("ndr-amount").textContent = fmt(ndr_jul26);
