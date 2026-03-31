@@ -1,0 +1,11 @@
+// https://biomejs.dev/guides/configure-biome/
+{
+  "formatter": {
+    "indentStyle": "space" // default is `tab`
+  },
+  "html": {
+    "formatter": {
+      "enabled": true
+    }
+  }
+}
