@@ -126,17 +126,31 @@
           mit 12-monatiger Laufzeit – was danach verhandelt wird, steht offen.
         </div>
       </div>
+      <div class="card">
+        <div class="card-label">04 — Gehaltsentwicklung &amp; Inflation ab 2022</div>
+        <div class="chart-wrapper">
+          <canvas id="salary-chart"></canvas>
+        </div>
+        <div class="info-box" style="margin-top: 12px;">
+          <strong>Hinweis:</strong> Alle Werte als kumulierte Veränderung seit Jan 2022.
+          Einmalzahlungen sind nicht berücksichtigt. Das NDR-Angebot für 2027/2028 gilt nur bei Rundfunkbeitragserhöhung.
+        </div>
+      </div>
+      <p class="disclaimer">
+        Diese Seite wurde mithilfe von KI erstellt und dient ausschließlich zur
+        unverbindlichen Information. Trotz sorgfältiger Aufbereitung wird keine
+        Gewähr für die Richtigkeit, Vollständigkeit oder Aktualität der
+        dargestellten Daten übernommen.
+      </p>
+      <p class="disclaimer">
+        <a href="https://github.com/Pia-Koester" target="_blank" rel="noopener" class="disclaimer-link">github.com/Pia-Koester</a>
+      </p>
     </div>
 
     <script src="script.js"></script>
 
-    <iframe
-      src="https://www-staging.c.varac.net/tarifrunde2026/embed.html"
-      width="100%"
-      height="600px"
-      style="border:none;"
-      title="Gehälter im NDR (Festangestellte) und Inflation ab 2022">
-    </iframe>
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    <script src="graph.js"></script>
   </body>
 </html>
