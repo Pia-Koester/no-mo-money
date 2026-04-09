@@ -1,13 +1,13 @@
 :root {
-  --bg: #0f0f0f;
-  --surface: #1a1a1a;
-  --border: #2a2a2a;
-  --accent-red: #e8402a;
-  --accent-green: #2ae87a;
-  --accent-yellow: #f5c518;
-  --text: #f0ede8;
-  --muted: #666;
-  --card: #161616;
+  --bg: #fafaf8;
+  --surface: #f0eeea;
+  --border: #e0dbd4;
+  --accent-red: #c0301c;
+  --accent-green: #1a8a4a;
+  --accent-yellow: #9a7008;
+  --text: #1a1714;
+  --muted: #555;
+  --card: #ffffff;
 }
 
 * {
@@ -68,7 +68,7 @@ h1 {
 
 h1 em {
   font-style: italic;
-  color: var(--accent-yellow);
+  color: #d4a000;
 }
 
 .subtitle {
@@ -140,7 +140,7 @@ select:focus {
 }
 
 select option {
-  background: #1a1a1a;
+  background: var(--surface);
 }
 
 /* Steigerungsanzeige */
@@ -211,7 +211,7 @@ select option {
 
 .disclaimer {
   font-size: 0.72rem;
-  color: #444;
+  color: var(--muted);
   line-height: 1.6;
   text-align: center;
   margin-top: 24px;
@@ -220,13 +220,13 @@ select option {
 }
 
 .disclaimer-link {
-  color: #555;
+  color: var(--muted);
   text-decoration: none;
   font-family: "DM Mono", monospace;
 }
 
 .disclaimer-link:hover {
-  color: var(--muted);
+  color: var(--text);
 }
 
 .chart-wrapper {
