@@ -56,7 +56,7 @@
         {
           label: "NDR-Angebot (2027/2028 nur bei Beitragserhöhung)",
           data: [
-            { x: "2025-12-31", y: 8.74 },
+            { x: "2026-02-01", y: 8.74 },
             { x: "2026-07-01", y: 9.97 },
             { x: "2027-06-01", y: 11.4 },
             { x: "2028-04-01", y: 12.83 },
@@ -67,6 +67,7 @@
           pointRadius: 4,
           pointBackgroundColor: "#8833bb",
           tension: 0,
+          stepped: true,
         },
       ],
     },
