@@ -193,14 +193,10 @@ function update() {
   document.getElementById("current-display").style.display = "block";
   document.getElementById("current-value").textContent = fmt(base);
 
-  // NDR: +1.23% ab Jul 2026, dann +1.43% ab Jun 2027 (mit Beitrag), dann +1.43% ab Apr 2028
+  // NDR: +1.23% ab Jul 2026, dann garantiert +1.43% ab Jun 2027, dann +1.43% ab Apr 2028
   const ndr_jul26 = base * 1.0123;
   const ndr_jun27 = ndr_jul26 * 1.0143;
   const ndr_apr28 = ndr_jun27 * 1.0143;
-
-  // NDR ohne Beitragserhöhung
-  const ndr_noerh_27 = ndr_jul26 * 1.01;
-  const ndr_noerh_28 = ndr_noerh_27 * 1.01;
 
   // Gewerkschaft: +7% sofort, mindestens +300 € (ab Feb 2026)
   const gew_pct = base * 1.07;
@@ -261,13 +257,13 @@ function update() {
     },
     {
       label: "Jun 2027–Mär 2028",
-      note: "(+1,43 % NDR, mit Beitrag)",
+      note: "(+1,43 % NDR)",
       ndr: ndr_jun27,
       gew: gew,
     },
     {
       label: "Apr–Dez 2028",
-      note: "(+1,43 % NDR, mit Beitrag)",
+      note: "(+1,43 % NDR)",
       ndr: ndr_apr28,
       gew: gew,
     },

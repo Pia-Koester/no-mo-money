@@ -54,7 +54,7 @@
           tension: 0,
         },
         {
-          label: "NDR-Angebot (2027/2028 nur bei Beitragserhöhung)",
+          label: "NDR-Angebot",
           data: [
             { x: "2026-02-01", y: 8.74 },
             { x: "2026-07-01", y: 9.97 },
