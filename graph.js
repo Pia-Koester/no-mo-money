@@ -38,6 +38,7 @@
           pointRadius: 4,
           pointBackgroundColor: "#c0301c",
           tension: 0,
+          stepped: true,
         },
         {
           label: "ver.di Forderung (12 Monate)",

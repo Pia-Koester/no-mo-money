@@ -187,7 +187,8 @@ function update() {
     return;
   }
 
-  const base = GEHÄLTER[gruppe][parseInt(stufe)];
+  const teilzeit = parseFloat(document.getElementById("teilzeit").value);
+  const base = GEHÄLTER[gruppe][parseInt(stufe)] * teilzeit;
 
   // Show current salary
   document.getElementById("current-display").style.display = "block";
@@ -198,10 +199,10 @@ function update() {
   const ndr_jun27 = ndr_jul26 * 1.0143;
   const ndr_apr28 = ndr_jun27 * 1.0143;
 
-  // Gewerkschaft: +7% sofort, mindestens +300 € (ab Feb 2026)
+  // Gewerkschaft: +7% sofort, mindestens +300 € nur für Vollzeit (ab Feb 2026)
   const gew_pct = base * 1.07;
-  const gew_min = base + 300;
-  const usesMinimum = gew_min > gew_pct;
+  const gew_min = teilzeit === 1 ? base + 300 : gew_pct;
+  const usesMinimum = teilzeit === 1 && gew_min > gew_pct;
   const gew = usesMinimum ? gew_min : gew_pct;
   const effectivePct = (((gew - base) / base) * 100).toFixed(1);
 
