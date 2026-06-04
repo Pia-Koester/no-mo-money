@@ -394,6 +394,88 @@ select option {
   color: var(--accent-yellow);
 }
 
+/* Versetzungskarte */
+.versetzung-intro {
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.versetzung-compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.versetzung-col {
+  border-radius: 10px;
+  padding: 18px 20px;
+  border: 1px solid transparent;
+}
+
+.versetzung-col--ndr {
+  background: rgba(0, 0, 0, 0.03);
+  border-color: var(--border);
+}
+
+.versetzung-col--reality {
+  background: rgba(192, 48, 28, 0.05);
+  border-color: rgba(192, 48, 28, 0.2);
+}
+
+.versetzung-col-header {
+  font-family: "DM Mono", monospace;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.versetzung-col--ndr .versetzung-col-header {
+  color: var(--muted);
+}
+
+.versetzung-col--reality .versetzung-col-header {
+  color: var(--accent-red);
+}
+
+.versetzung-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.versetzung-list li {
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--text);
+  padding-left: 14px;
+  position: relative;
+}
+
+.versetzung-col--ndr .versetzung-list li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: var(--muted);
+}
+
+.versetzung-col--reality .versetzung-list li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--accent-red);
+}
+
+@media (max-width: 560px) {
+  .versetzung-compare {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Divider */
 hr {
   border: none;
